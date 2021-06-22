@@ -9,21 +9,21 @@ var cars = [
 		src:"./images/polo.jpg" 	
      },
 	 {
-    model:'kia',
+    model:'kia Rio',
 	color:'red',
 	gearbox:'Automatic',
 	price:130,
 		src:"./images/kia.jpg" 	
 	 },
 	 {
-	model:'Mercedes',
+	model:'Mercedes A class',
 	color:'White',
 	gearbox:'Automatic',
 	price:230,
 	src:"./images/mercedes.jpg" 	 	
 	 },
 	 {
-	model:'Ford',
+	model:'Ford Focus',
 	color:'green',
 	gearbox:'Manual',
 	price:170,
@@ -34,11 +34,16 @@ var cars = [
 function displayCar(car){
 
 var $car=$(`<div><p> model ${car.model}</p> <img src=${car.src} /> </div>`)
-$('body').append($car)
+$('#car').append($car)
 	
 }
 
-	
+$('document').ready(function(){
+	$("#btn").on("click",displayCar(cars[3]))
+
+})
+
+
 	
 
 	
